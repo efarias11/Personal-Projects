@@ -23,8 +23,7 @@ def quicksort(array, lowI, highI):
     quicksort(array, left_pointer + 1, highI)
 
 def partition(array, lowI, highI, pivot):
-    left_pointer = lowI
-    right_pointer = highI - 1
+    left_pointer = lowI; right_pointer = highI - 1 # creating multiple assignments on one line
 
     while(left_pointer<=right_pointer):
         while(array[left_pointer] <= pivot and left_pointer <= right_pointer):
@@ -38,11 +37,8 @@ def partition(array, lowI, highI, pivot):
     swap(array, left_pointer, highI)
     return left_pointer
 
-size = 50
-nums = [random.randint(1,1000) for l in range(size)] # we created a list with a given size and random nums range from 1 to 1000
-print("Before: ")
-printArray(nums)
+size = 50; nums = [random.randint(1,1000) for l in range(size)] # we created a list with a given size and random nums range from 1 to 1000
+print("Before: "); printArray(nums)
 
 quicksort(nums, 0, len(nums)-1)
-print("After: ")
-printArray(nums)
+print("After: "); printArray(nums)

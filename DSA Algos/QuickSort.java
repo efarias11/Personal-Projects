@@ -4,7 +4,7 @@ import java.util.Random;
 public class QuickSort{
     public static void main(String[] args) {
         Random rand = new Random();
-        int[] nums = new int[100];
+        int[] nums = new int[50];
 
         for (int i = 0; i < nums.length; i++){
             nums[i] = rand.nextInt(1000);
